@@ -1,0 +1,51 @@
+## Parameters for texture-shape experiments
+
+#------------------------------------------------------------------------------
+# Experimental parameters
+#------------------------------------------------------------------------------
+
+ms_fixation: 300  # duration of fixation at the start of a block.
+ms_stim: 200  # duration of stimulus presentation
+ms_mask: 200  # duration of pink noise mask presentation
+ms_resp_object: 1500  # duration for making the object response (fixed interval ITI).
+ms_resp_object_practice: 1500 # duration for practice trials
+
+
+surround_size: 224
+fixation_size: 230  # the size of the fixation rectangle.
+
+ms_feedback: 300  # the duration of visual feedback
+auditive_feedback: 0  # 0 = no feedback, 1 = feedback (a short beep sound)
+visual_feedback: 0  # 0 = no feedback, 1 = feedback (correct category)
+
+
+bg_color: 0.7614  # grey level of background = mean of all image values (grayscale)
+dist_monitor: 107 # monitor distance in cm
+
+num_trials_per_block: 256
+num_practice_trials_per_block: 160
+
+# response screen params:
+box_size: 129   # pixels of the square response boxes.
+object_gap: 10   # gap between responses on the object screen.
+
+# all conditions of the respective experiment
+conditions: ['true', 'false']
+
+# categories in row, column order of response grid:
+final_cats_responses: ['knife',
+                       'airplane',
+                       'keyboard',
+                       'elephant',
+                       'bicycle',
+                       'clock',
+                       'oven',
+                       'chair',
+                       'bear',
+                       'boat',
+                       'cat',
+                       'bottle',
+                       'truck',
+                       'car',
+                       'bird',
+                       'dog']

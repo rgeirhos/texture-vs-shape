@@ -1,0 +1,1 @@
+montage example_image_colour.png example_image_uniform_noise.png example_image_low_contrast.png example_image_highpass.png example_image_lowpass.png example_image_grayscale.png eidolon_coh_10_reach_4.png eidolon_coh_3_reach_3.png eidolon_coh_0_reach_3.png example_image_phase-scrambling.png -tile 5x2 -geometry 224x224+5+5 all_stimuli_figure.png
