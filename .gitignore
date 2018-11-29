@@ -1,11 +1,3 @@
-# script 
-remove-stuff.sh
-
-# open images dataset
-code/imagenet_training/open_images/*.png
-code/imagenet_training/open_images/*.jpg
-code/imagenet_training/open_images/*ckpt*
-
 # database
 *.db
 
@@ -24,14 +16,6 @@ code/imagenet_training/open_images/*ckpt*
 # R stuff
 *.RData
 *.Rhistory
-
-# directories
-code/style-transfer/target-imgs/*
-code/imagenet_training/arbitrary_style_transfer/*output*/*
-code/imagenet_training/arbitrary_style_transfer/*input*/*
-code/imagenet_training/checkpoints/
-code/imagenet_training/runs/*
-code/imagenet_training/saved_models/*
 
 *.pyc
 *.swp
