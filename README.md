@@ -58,7 +58,7 @@ For dataset preprocessing, we used the standard ImageNet normalization for both 
 
 These were the training transformations:
 
-```
+```python
     train_transforms = transforms.Compose([
                                   transforms.RandomResizedCrop(224),
                                   transforms.RandomHorizontalFlip(),
@@ -66,7 +66,7 @@ These were the training transformations:
 ```
 
 and those the validation transformations:
-```                                  
+```python                                  
     val_transforms = transforms.Compose([
                                       transforms.Resize(256),
                                       transforms.CenterCrop(224),
