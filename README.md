@@ -18,6 +18,7 @@ Some aspects of this repository are borrowed from our earlier work, "Generalisat
 ## data-analysis
 The ``data-analysis/`` directory contains the main analysis script ``data-analysis.R`` and some helper functionality. All created plots will then be stored in the ``paper-figures/`` directory.
 
+Please note: For AlexNet, VGG-16 and GoogLeNet we used the caffe implementation; for ResNet-50 the torchvision implementation. When computing the shape bias for AlexNet and VGG-16 using torchvision, the values differ (as pointed out in #7). The shape bias of AlexNet is 25.3%, for VGG-16 it is 9.2%. Both shape bias values are lower than the ones reported in the paper that were obtained with caffe. This means that using the torchvision implementation, we obtain even more extreme texture bias for these two models. Generally we recommend using the torchvision implementation (more commonly used & up-to-date framework).
 
 ## lab-experiment
 Everything necessary to run an experiment in the lab with human participants. This is based on MATLAB.
