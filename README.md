@@ -87,3 +87,10 @@ Here, a ``.csv`` file for each observer and network experiment contains the raw 
 These are the raw stimuli used in our experiments. Each directory contains stimuli images split into 16 subdirectories (one per category).
 
 
+# FAQ
+
+#### Code to run style transfer:
+I used [Leon Gatys' code](https://github.com/leongatys/PytorchNeuralStyleTransfer) to run style transfer with default settings and hyperparameters as specified in the code. The final content and style loss depend on the image.
+
+#### In addition to the cue conflict stimuli, can you share the stimuli for the texture experiment / the 'original' experiment / ...?
+Unfortunately, the image permissions do not allow me to share or distribute these stimuli.
