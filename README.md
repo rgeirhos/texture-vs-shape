@@ -92,5 +92,9 @@ These are the raw stimuli used in our experiments. Each directory contains stimu
 #### Code to run style transfer:
 I used [Leon Gatys' code](https://github.com/leongatys/PytorchNeuralStyleTransfer) to run style transfer with default settings and hyperparameters as specified in the code. The final content and style loss depend on the image.
 
+#### Can you share Stylized-ImageNet directly?
+Unfortunately, due to copyright restrictions I am not allowed to share this version of ImageNet directly, since not all of the original ImageNet images are permitted for using / sharing / modification.
+
+
 #### In addition to the cue conflict stimuli, can you share the stimuli for the texture experiment / the 'original' experiment / ...?
 Unfortunately, the image permissions do not allow me to share or distribute these stimuli.
