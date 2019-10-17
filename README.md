@@ -38,7 +38,7 @@ The file ``load_pretrained_models.py`` will load the following models that are t
     model_B = "resnet50_trained_on_SIN_and_IN"
     model_C = "resnet50_trained_on_SIN_and_IN_then_finetuned_on_IN"
 ```
-These correspond to the models reported in Table 2 of the paper (method details in Section A.5 of the Appendix).
+These correspond to the models reported in Table 2 of the paper (method details in Section A.5 of the Appendix). Additionally, AlexNet and VGG-16 trained on SIN are provided.
 
 We used the [PyTorch ImageNet training script](https://github.com/pytorch/examples/tree/master/imagenet)  to train the models. These are the training hyperparameters:
 
