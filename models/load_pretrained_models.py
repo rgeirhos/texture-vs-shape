@@ -31,7 +31,7 @@ def load_model(model_name):
         # download model from URL manually and save to desired location
         filepath = "./vgg16_train_60_epochs_lr0.01-6c6fcc9f.pth.tar"
 
-        assert os.path.exists(filepath), "Please download the VGG model yourself from the following repository and save it locally: https://bitbucket.org/robert_geirhos/texture-vs-shape-pretrained-models/src/master/ (too large to be downloaded automatically like the other models)"
+        assert os.path.exists(filepath), "Please download the VGG model yourself from the following link and save it locally: https://drive.google.com/drive/folders/1A0vUWyU6fTuc-xWgwQQeBvzbwi6geYQK (too large to be downloaded automatically like the other models)"
 
         model = torchvision.models.vgg16(pretrained=False)
         model.features = torch.nn.DataParallel(model.features)
