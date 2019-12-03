@@ -38,7 +38,7 @@ The file ``load_pretrained_models.py`` will load the following models that are t
     model_B = "resnet50_trained_on_SIN_and_IN"
     model_C = "resnet50_trained_on_SIN_and_IN_then_finetuned_on_IN"
 ```
-These correspond to the models reported in Table 2 of the paper (method details in Section A.5 of the Appendix). Additionally, AlexNet and VGG-16 trained on SIN are provided.
+These correspond to the models reported in Table 2 of the paper (method details in Section A.5 of the Appendix). Additionally, AlexNet and VGG-16 trained on SIN are provided. Please note that the overall performance of those two models is not great since the hyperparameters used during training were likely suboptimal. The top1/top5 performance of VGG-16 trained on SIN and evaluated on ImageNet are: Prec@1 52.260 Prec@5 76.390 (evaluated on SIN: Prec@1 48.958 Prec@5 73.092).
 
 We used the [PyTorch ImageNet training script](https://github.com/pytorch/examples/tree/master/imagenet)  to train the models. These are the training hyperparameters:
 
