@@ -73,6 +73,7 @@ and those the validation transformations:
                                       transforms.CenterCrop(224),
                                       transforms.ToTensor()])                 
 ```
+Input format: RGB.
 
 
 ## paper-figures
