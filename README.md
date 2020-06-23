@@ -80,7 +80,7 @@ Input format: RGB.
 These are the shape bias values of the four models mentioned above. As a rough guideline, the more epochs a model was trained on ImageNet the lower its shape bias; the more epochs a model was trained on Stylized-ImageNet the higher its shape bias. Fine-tuning on ImageNet (as for model_C) leads to improved ImageNet performance, even better than a standard ResNet-50, but it also means that the model "forgets" the shape bias it had before finetuning.
 
 | model | shape bias  |
-|---|---|---|---|---|
+|---|---|
 | standard ResNet-50  | 21.39% |
 | model_A  | 81.37% | 
 | model_B  | 34.65%  | 
