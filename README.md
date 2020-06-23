@@ -75,16 +75,16 @@ and those the validation transformations:
 ```
 Input format: RGB.
 
-### Shape bias of different SIN-trained models
+#### Shape bias and IN accuracies of different SIN-trained models
 
 These are the shape bias values of the four models mentioned above. As a rough guideline, the more epochs a model was trained on ImageNet the lower its shape bias; the more epochs a model was trained on Stylized-ImageNet the higher its shape bias. Fine-tuning on ImageNet (as for model_C) leads to improved ImageNet performance, even better than a standard ResNet-50, but it also means that the model "forgets" the shape bias it had before finetuning.
 
-| model | shape bias  |
-|---|---|
-| standard ResNet-50  | 21.39% |
-| model_A  | 81.37% | 
-| model_B  | 34.65%  | 
-| model_C  | 20.54% | 
+| model | shape bias | top-1 IN acc | top-5 IN acc |
+|---|---|---|---|
+| standard ResNet-50 | 21.39% | 76.13 | 92.86 |
+| model_A            | 81.37% | 60.18 | 82.62 |
+| model_B            | 34.65% | 74.59 | 92.14 |
+| model_C            | 20.54% | 76.72 | 93.28 |
 
 Note that these values are computed using a slightly different probability aggregation method as reported in the paper. We here used the average: ImageNet class probabilities were mapped to the corresponding 16-class-ImageNet category using the average of all corresponding fine-grained category probabilities. We recommend using this approach instead of other aggregation methods (summation, max, ...).
 
