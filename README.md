@@ -15,6 +15,23 @@ Note that Stylized-ImageNet, an important dataset used in this paper, has its ow
 Some aspects of this repository are borrowed from our earlier work, "Generalisation in humans and deep neural networks" (published at NeurIPS 2018). The corresponding code, data and materials can be obtained from [rgeirhos:generalisation-humans-DNNs](https://github.com/rgeirhos/generalisation-humans-DNNs). For convencience, some human data from this repo (which are used in the texture-vs-shape work for comparison) are included here directly (under ``raw-data/raw-data-from-generalisation-paper/``).
 
 
+## code
+The ``code/`` directory contains mapping functionality that can be used to determine the corresponding entry-level class (out of 16, e.g. "dog") from a vector of length 1,000 (softmax output of a typical ImageNet classifier). In order to use this, follow the steps below:
+
+```python
+    # get softmax output
+    softmax_output = SomeCNN(input_image) # replace with your favourite CNN
+
+    # convert to numpy
+    softmax_output_numpy = SomeConversionToNumpy(softmax_output) # replace with conversion
+
+    # create mapping
+    mapping = probabilities_to_decision.ImageNetProbabilitiesTo16ClassesMapping()
+    
+    # obtain decision 
+    decision_from_16_classes = mapping.probabilities_to_decision(softmax_output_numpy)
+```
+
 ## data-analysis
 The ``data-analysis/`` directory contains the main analysis script ``data-analysis.R`` and some helper functionality. All created plots will then be stored in the ``paper-figures/`` directory.
 
