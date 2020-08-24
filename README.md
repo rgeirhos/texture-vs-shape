@@ -125,6 +125,12 @@ I used [Leon Gatys' code](https://github.com/leongatys/PytorchNeuralStyleTransfe
 #### Can you share Stylized-ImageNet directly?
 Unfortunately, due to copyright restrictions I am not allowed to share this version of ImageNet directly, since not all of the original ImageNet images are permitted for using / sharing / modification.
 
-
 #### In addition to the cue conflict stimuli, can you share the stimuli for the texture experiment / the 'original' experiment / ...?
 Unfortunately, the image permissions do not allow me to share or distribute these stimuli.
+
+#### How do I compute the shape bias of a model?
+1.) You evaluate your models on all 1,280 images here (https://github.com/rgeirhos/texture-vs-shape/tree/master/stimuli/style-transfer-preprocessed-512).
+2.) You then map decisions to 16 classes using the code provided above.
+3.) You then exclude images without a cue conflict (e.g. texture=cat, shape=cat).
+4.) You take the subset of "correctly" classified images (either shape or texture category correctly predicted)
+5.) You compute "shape bias" as the following fraction: (correct shape decisions) / (correct shape decisions + correct texture decisions).
