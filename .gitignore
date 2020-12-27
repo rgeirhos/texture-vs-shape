@@ -2,7 +2,6 @@
 *.db
 
 # images
-*test*.png
 *test*.jpeg
 *test*.jpg
 
