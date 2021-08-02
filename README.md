@@ -1,3 +1,6 @@
+### :tada: Update (Aug 2021): 
+Plotting the shape bias of your model has never been easier! The comprehensive toolbox at [bethgelab:model-vs-human](https://github.com/bethgelab/model-vs-human) supports all datasets reported here (e.g. texture-shape cue conflict, silhouettes-only, edges-only) and comes with code to evaluate arbitrary PyTorch / TensorFlow models.
+
 # Data, code and materials from <br>"ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness"
 
 This repository contains information, data and materials from the paper [ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness](https://openreview.net/forum?id=Bygh9j09KX) by Robert Geirhos, Patricia Rubisch, Claudio Michaelis, Matthias Bethge, Felix A. Wichmann, and Wieland Brendel. We hope that you may find this repository a useful resource for your own research.
@@ -129,6 +132,8 @@ Unfortunately, due to copyright restrictions I am not allowed to share this vers
 Unfortunately, the image permissions do not allow me to share or distribute these stimuli.
 
 #### How do I compute the shape bias of a model?
+It's simple: check out [bethgelab:model-vs-human](https://github.com/bethgelab/model-vs-human), which supports plotting the shape bias for arbitrary PyTorch / TensorFlow models (dataset name: cue-conflict). Alternatively, if you'd like to go through the steps one-by-one, here's what you'll need to do:
+
 1. Evaluate your models on all 1,280 images here (https://github.com/rgeirhos/texture-vs-shape/tree/master/stimuli/style-transfer-preprocessed-512).
 2. Map model decisions to 16 classes using the code provided above (https://github.com/rgeirhos/texture-vs-shape#code).
 3. Exclude images without a cue conflict (e.g. texture=cat, shape=cat).
