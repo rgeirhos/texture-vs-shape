@@ -54,9 +54,14 @@ Some of the helper functions are based on other people's code, please check out 
 The file ``load_pretrained_models.py`` will load the following models that are trained on Stylized-ImageNet:
 
 ```python
+
+    from load_pretrained_models import load_model
+    
     model_A = "resnet50_trained_on_SIN"
     model_B = "resnet50_trained_on_SIN_and_IN"
     model_C = "resnet50_trained_on_SIN_and_IN_then_finetuned_on_IN"
+    
+    model = load_model(model_name = model_A) # or model_B or model_C
 ```
 These correspond to the models reported in Table 2 of the paper (method details in Section A.5 of the Appendix). Additionally, AlexNet and VGG-16 trained on SIN are provided. Please note that the overall performance of those two models is not great since the hyperparameters used during training were likely suboptimal. The top1/top5 performance of VGG-16 trained on SIN and evaluated on ImageNet are: Prec@1 52.260 Prec@5 76.390 (evaluated on SIN: Prec@1 48.958 Prec@5 73.092).
 
