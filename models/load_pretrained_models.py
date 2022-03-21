@@ -16,7 +16,6 @@ def load_model(model_name):
             'resnet50_trained_on_SIN': 'https://bitbucket.org/robert_geirhos/texture-vs-shape-pretrained-models/raw/6f41d2e86fc60566f78de64ecff35cc61eb6436f/resnet50_train_60_epochs-c8e5653e.pth.tar',
             'resnet50_trained_on_SIN_and_IN': 'https://bitbucket.org/robert_geirhos/texture-vs-shape-pretrained-models/raw/60b770e128fffcbd8562a3ab3546c1a735432d03/resnet50_train_45_epochs_combined_IN_SF-2a0d100e.pth.tar',
             'resnet50_trained_on_SIN_and_IN_then_finetuned_on_IN': 'https://bitbucket.org/robert_geirhos/texture-vs-shape-pretrained-models/raw/60b770e128fffcbd8562a3ab3546c1a735432d03/resnet50_finetune_60_epochs_lr_decay_after_30_start_resnet50_train_45_epochs_combined_IN_SF-ca06340c.pth.tar',
-            'alexnet_trained_on_SIN': 'https://bitbucket.org/robert_geirhos/texture-vs-shape-pretrained-models/raw/0008049cd10f74a944c6d5e90d4639927f8620ae/alexnet_train_60_epochs_lr0.001-b4aa5238.pth.tar',
     }
 
     if "resnet50" in model_name:
@@ -40,10 +39,16 @@ def load_model(model_name):
 
     elif "alexnet" in model_name:
         print("Using the AlexNet architecture.")
+        
+        # download model from URL manually and save to desired location
+        filepath = "./alexnet_train_60_epochs_lr0.001-b4aa5238.pth.tar"
+
+        assert os.path.exists(filepath), "Please download the AlexNet model yourself from the following link and save it locally: https://drive.google.com/drive/u/0/folders/1GnxcR6HUyPfRWAmaXwuiMdAMKlL1shTn"
+        
         model = torchvision.models.alexnet(pretrained=False)
         model.features = torch.nn.DataParallel(model.features)
         model.cuda()
-        checkpoint = model_zoo.load_url(model_urls[model_name])
+        checkpoint = torch.load(filepath)
     else:
         raise ValueError("unknown model architecture.")
 
