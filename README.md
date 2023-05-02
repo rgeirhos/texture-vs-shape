@@ -13,7 +13,7 @@ Please don't hesitate to contact me at robert.geirhos@bethgelab.org or open an i
 This README is structured according to the repo's structure: one section per subdirectory (alphabetically).
 
 ##### Related repositories:
-Note that Stylized-ImageNet, an important dataset used in this paper, has its own repository at [rgeirhos:Stylized-ImageNet](https://github.com/rgeirhos/Stylized-ImageNet).
+Note that Stylized-ImageNet, an important dataset used in this paper, has its own repository at [rgeirhos:Stylized-ImageNet](https://github.com/rgeirhos/Stylized-ImageNet). The cue conflict dataset used to evaluate shape/texture bias is NOT the same as Stylized-ImageNet. 
 
 Some aspects of this repository are borrowed from our earlier work, "Generalisation in humans and deep neural networks" (published at NeurIPS 2018). The corresponding code, data and materials can be obtained from [rgeirhos:generalisation-humans-DNNs](https://github.com/rgeirhos/generalisation-humans-DNNs). For convencience, some human data from this repo (which are used in the texture-vs-shape work for comparison) are included here directly (under ``raw-data/raw-data-from-generalisation-paper/``).
 
